@@ -1,0 +1,7 @@
+h1{
+    color: #98Ca3F;
+    /*This is our color value, we need to manage hexadecimal codes*/
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Helvetica";
+}
