@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is an example of the methodology</title>
+</head>
+<style>
+    .header{
+        background-color: #16A085;
+        background-image: linear-gradient(132deg, #AB88FF 0%, #F4D03F 100%);
+        width: 100%;
+        height: 80px;
+    }
+    body{
+        margin:0;
+        background-color: #16A085;
+        background-image: linear-gradient(132deg, #AB88FF 0%, #F4D03F 100%);
+        width: 100%;
+        height: 80px;
+    }
+    .header__img{
+        width: 432px;
+        margin-left: 10px;
+        
+    }
+    a{
+        color: white;
+        font-size:medium;
+        margin: 10px 10px 10px;
+    }
+    input{
+        margin-top: 80px;
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .header__menu{
+        margin-right: 30px;
+    }
+    .header__img--profile{
+        width: 100px;
+        margin-left: 10px;
+    }
+    .header__p--texto1{
+        color: white;
+        margin-left: 10px;
+    }
+    /*This is a way to call an element with no well defined class just
+    typing the "route" and then the element, in this case "ul"*/
+    .header__menu ul{
+        display: none;
+        /*by default, we have points in our list but sometimes they are not good to our style so we can 
+        remove it with the following command*/
+        list-style: none;
+        /*Removing the padding*/
+        padding: 0px;
+        /*Adding an absolute position*/
+        position: absolute;
+        width: 100px;
+        /*Aligning the text*/
+        text-align: right;
+        /*We can locate our elements where we want if we
+        know how to play with margins and aligments*/
+        margin: 0px 0px 0px -14px;
+    }
+</style>
+<body>
+    <header class="header">
+        <!--Adding an image to my header-->
+        <img class="header__img" src="./logo-platzi-video-BW2.png" alt="Photo">
+        <!--Adding a div with my menu-->
+        <div class="header__menu">
+            <div class="header__menu--profile">
+            <!--Putting into this div the image-->
+            <img class="header__img--profile" src="./MATINGAS.PNG" alt="User">
+            <p class="header__p--texto1">Perfil</p>
+            </div>
+            <!--Creating a list-->
+            <ul>
+                <li>
+                    <a href="/">Cuenta</a> <!--The slash into the href makes we go to the main profile-->
+                </li>
+                <li>
+                    <a href="/">Cerrar Sesión</a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+    
+    <!--
+    <section class="main">
+        <form class="main__form">
+            <input class="main__form--input" type="text" placeholder="Nombre">
+            <input class="main__form--input" type="password" placeholder="Contraseña">
+            <button class="header__button--red">Ingresar</button>
+        </form>
+    </section>
+    -->
+    <!--
+    <footer class="footer">
+        <a class="footer__item">Policy and privacy</a>
+        <a class="footer__item">Terms and conditions</a>
+    </footer>
+    -->
+</body>
+</html>
