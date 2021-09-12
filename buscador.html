@@ -4,51 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
     <title>This is an example of the methodology</title>
 </head>
 <style>
     .header{
-        background-color: #16A085;
-        background-image: linear-gradient(132deg, #AB88FF 0%, #F4D03F 100%);
+        background-color: #8F57FD;
+        /*background-image: linear-gradient(132deg, #AB88FF 0%, #F4D03F 100%);*/
         width: 100%;
         height: 80px;
+        /*We saw in the teacher's model we need to 
+        put our photo in the top-right of the window and to do this
+        we need to use the following commands*/
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     body{
         margin:0;
-        background-color: #16A085;
-        background-image: linear-gradient(132deg, #AB88FF 0%, #F4D03F 100%);
+        background-color: #8F57FD;
+        /*background-image: linear-gradient(132deg, #AB88FF 0%, #F4D03F 100%);*/
         width: 100%;
         height: 80px;
+        /*Font brough from google fonts*/
+        font-family: 'Mulish', sans-serif;
     }
     .header__img{
-        width: 432px;
+        width: 250px;
         margin-left: 10px;
+        margin-top: 10px;
         
     }
-    a{
+    /*a{
         color: white;
         font-size:medium;
         margin: 10px 10px 10px;
-    }
-    input{
+    }*/
+    /*input{
         margin-top: 80px;
         margin-bottom: 10px;
         margin-left: 10px;
-    }
+    }*/
     .header__menu{
         margin-right: 30px;
+        
+    }
+    .header__menu li a:hover{
+        text-decoration: underline;
+      
+
     }
     .header__img--profile{
         width: 100px;
         margin-left: 10px;
+        margin-top: 10px;
+        margin-right: 50px;
+        /*display: flex;*/
+        align-items: center;
     }
-    .header__p--texto1{
-        color: white;
-        margin-left: 10px;
+    .header__menu--profile{
+        margin-right: 8px;
+        display: flex;
     }
     /*This is a way to call an element with no well defined class just
     typing the "route" and then the element, in this case "ul"*/
     .header__menu ul{
+        /*This code is to hide our property in
+        our normal view and forward we're going
+        to make them appear through a hover option.*/
         display: none;
         /*by default, we have points in our list but sometimes they are not good to our style so we can 
         remove it with the following command*/
@@ -63,6 +86,67 @@
         /*We can locate our elements where we want if we
         know how to play with margins and aligments*/
         margin: 0px 0px 0px -14px;
+        
+    }
+    /*Now in our task we need to activate a "hover" and
+    this is an action that let us go over an element and
+    show hiden elements*/
+    .header__menu:hover ul, ul:hover{
+        /*in this case we're going to apply this property to our menu (header__menu)
+        and to our list called "ul"*/
+        display: block;
+    }
+    /*Now we're going to stylize our list elements*/
+    .header__menu li{
+        margin: 5px 10px;
+        /*Normally, we use 4 px elements but 
+        when we use only two, we are assigning the first
+        element to the top and the bottom margin and the second one
+        to the left and right*/
+    }
+    .header__menu li a{
+        color: white;
+        text-decoration: none;
+    }
+    .header__menu--profile img{
+        margin-right: 5px;
+        width: 40px;
+        border-radius: 25px;
+    }
+    .header__menu--profile p{
+        margin: 10px 10px;
+        color: white;
+    }
+    /********************************************************************************************************/
+    /*This will be our section style*/
+    .main{
+        height: 300px;
+    }
+    .main__title{
+        color: white;
+    }
+    .input{
+        background-color: rgba(255,255,255,0.1);
+        border: 2px solid white;
+        font-size: 25px solid white;
+        /*Make curled borders*/
+        border-radius: 25px;
+        align-items: center;
+        /*Background color*/
+        color: white;
+        /*Font type*/
+        font-family: 'Mulish', sans-serif;
+        font-size: 16px;
+        height: 50px;
+        padding: 0px 20px;
+        width: 70%;
+        outline: white;
+        margin: 10px 10px;
+        
+    }
+    /*Now, to color the text inside the input we can use a pseudo-element starting with "::"*/
+    ::placeholder{
+        color: white;
     }
 </style>
 <body>
@@ -74,12 +158,12 @@
             <div class="header__menu--profile">
             <!--Putting into this div the image-->
             <img class="header__img--profile" src="./MATINGAS.PNG" alt="User">
-            <p class="header__p--texto1">Perfil</p>
+            <p>Perfil</p>
             </div>
             <!--Creating a list-->
             <ul>
                 <li>
-                    <a href="/">Cuenta</a> <!--The slash into the href makes we go to the main profile-->
+                    <a href="https://www.instagram.com/katzematt/">Cuenta</a> <!--The slash into the href makes we go to the main profile-->
                 </li>
                 <li>
                     <a href="/">Cerrar Sesión</a>
@@ -88,21 +172,13 @@
         </div>
 
     </header>
-    
-    <!--
+   <!--The following section will be used to inser the searcher and its title-->
     <section class="main">
-        <form class="main__form">
-            <input class="main__form--input" type="text" placeholder="Nombre">
-            <input class="main__form--input" type="password" placeholder="Contraseña">
-            <button class="header__button--red">Ingresar</button>
-        </form>
-    </section>
-    -->
-    <!--
-    <footer class="footer">
-        <a class="footer__item">Policy and privacy</a>
-        <a class="footer__item">Terms and conditions</a>
-    </footer>
-    -->
+        <!--The title, but with a lower relevance and for that we'll use a "h2"-->
+        <h2 class="main__title">¿Qué quieres ver hoy?</h2>
+        <!--Our searcher will be an input tag-->
+        <input class="input" type="text" placeholder="Buscar...">
+   </section> 
+   
 </body>
 </html>

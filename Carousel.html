@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+</head>
+<style>
+    body{
+        margin: 0px;
+    }
+    .carousel{
+        width: 100%;
+        /*We can create a scroll in the screen with the following command*/
+        overflow:scroll;
+        padding: 30px;
+        position: relative; /*This command can be confusing but it works to make all its "sons" 
+        will be positioned in relation with the "father"*/
+    }
+    .carousel__container{
+        /*In our elements, we have many options to positionate them. Two good options are, positioning along the
+        website's body or we can put them one below the others and in this case we want the first option
+        and this is made with the following command*/
+        white-space: nowrap;
+        /*
+        In case we need the second option the command would be the following:
+        white-space: normal;
+        */
+        margin: 70px 0px;
+        padding-bottom: 10px;
+    }
+    .carousel-item{
+        /*To see the initial changes, we're going to add a sample background*/
+        background-color: palevioletred;
+        /*To copy the website image, we can see each image has a width, a heigh and a curved border*/
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 10px;
+        /*
+        The following command is to put an item netx to the other, instead of under it as 
+        we see by defaul. The default value is 
+        display: block
+        */
+        display: inline-block;
+        cursor: pointer; /*This comand is to change the cursor arrow for a hand when we hover over an
+        element*/
+        transition: 450ms all; /*This command is to make our animation more fluid*/
+        transform-origin: center left; /*this command let's us adapt this animation from left to right*/
+        position: relative;
+    }
+    .carousel-item:hover ~ .carousel-item {
+        /*We used this prooperty previously to modify actions over elements when we go over them*/
+        transform: translate3d(100px, 0, 0);
+        /*In this case, we used a complex command to animate our transitions. */
+    }
+    .carousel__container:hover  .carousel-item{
+        /*This property is for our elements when we go over them*/
+        opacity: 0.3;
+    }
+    
+    .carousel__container:hover .carousel-item:hover{
+        transform: scale(1.5); /*This element works to increase the element's size when we are over it*/
+        opacity: 1;
+    }
+
+    .carousel-item__img{
+        /*At first, our images seems a little bit huge so we need to make them fit*/
+        width: 200px;
+        height: 250px;
+        object-fit: cover; /*Sometimes the images will be ruined because we're modifying their size so
+        we can use this command to fit them*/
+    }
+    .carousel-item__details{
+        background: linear-gradient(to top, rgba(0,0,0,0.9),0%, rgba(0,0,0,0),100%);
+        /*Here, were creating our color gradient to create a cool effect, but this command is kinda complex
+        so basic in the way we set it here, we are telling the code the gradient starts in the top (to top)
+        and in the rgba code we're specifying the color black (0,0,0) but with a opacity of 0.9*/
+        font-size: 10px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding:10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/4577793/pexels-photo-4577793.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Elephants">
+                <div class="carousel-item__details">
+                    <!--We'll put the icons as images-->
+                    <div>
+                        <img src="https://img.icons8.com/flat-round/64/000000/play--v1.png" alt="Play">
+                        <img src="https://img.icons8.com/flat-round/64/000000/plus.png" alt="Plus">
+                    </div>
+                    <p class="carousel-item__details--title"> Título descriptivo ejemplo</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114 min</p>
+                </div>
+                
+            </div>
+            <div class="carousel-item">
+                <img class="carousel-item__img" src="https://images.pexels.com/photos/6467928/pexels-photo-6467928.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Big Cats">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
