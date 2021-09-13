@@ -1,0 +1,71 @@
+    body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    }
+  .header {
+    align-items: center;
+    background-color: #21c08b;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+  }
+  .header__img {
+    margin-left: 30px;
+    width: 200px;
+  }
+
+  .login {
+      background: linear-gradient(#21C08B, #AB88FF);
+      /*Here, we're start working with one of our previous commands "flex"*/
+      display: flex;
+      align-items: center;          /*Vertical aligment*/
+      justify-content: center;      /*Horizontal aligment*/
+      flex-direction: column ;      /*Locate vertically*/
+      padding: 0px 30px;            /*Margin in the borders*/
+      min-height: calc(100vh - 200px); /*This is kinda complex, because we're
+        putting a minimun height seen by user. Additionally the command "calc"
+        is a calculation where we put the comand "vh" which means view height and
+        it means the percentage seen by the user.*/
+  }
+  /*We have finished the login style, now we're going to go for the login container*/
+  .login__container{
+      background-color: rgba(255,255,255,0.1);
+      border: 2px solid white;
+      border-radius: 40px;
+      color: white; /*Text color*/
+      padding: 60px 68px 40px;
+      min-height: 700px;
+      width: 300px;
+  }
+  .login__container--form{
+      display: flex;
+      flex-direction: column; /*vertical alignment*/
+  }
+  .login__container--form label{
+    font-size: 14px;
+  }
+  .login__container--remember-me{
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+  }
+  .login__container--remember-me a{
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+  }
+  .login__container--remember-me a:hover{
+    color: white;
+    font-size: 14px;
+    text-decoration:underline;
+    }
+  .login__container--social-media > div{
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
