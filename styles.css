@@ -156,3 +156,20 @@
   .footer a:hover {
     text-decoration: underline;
   }
+  /*Now, we're going to use the Media queries and looks like a little complex but this is the way*/
+  @media only screen and (max-width: 600px) {
+    /*We add the element we'll modify in our resposive*/
+    .login__container {
+      background-color: transparent;
+      border: none;
+      padding: 0px;
+      width: 100%;
+     }
+    .footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+
+  
