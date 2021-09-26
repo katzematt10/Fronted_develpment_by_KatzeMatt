@@ -7,9 +7,9 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
   <!-- Styles -->
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles2.css">
   <!-- Title -->
-  <title>Iniciar Sesión</title>
+  <title>Registro</title>
 </head>
 <body>
   <header class="header">
@@ -17,7 +17,7 @@
   </header>
   <section class="login">
       <section class="login__container">
-        <h2>Inicia sesión</h2>
+        <h2>Regístrate</h2>
         <!--This form element is like a list but made to create inputs-->
         <form class="login__container--form"> 
             <!--
@@ -25,28 +25,36 @@
                 We also have an text type input for the user and
                 a password type input for the password.
             -->
+          <input class="input" type="text" placeholder="Nombre">
           <input class="input" type="text" placeholder="Correo">
           <input class="input" type="password" placeholder="Contraseña">
           <!--This is a button to execute a js code and login-->
-          <button class="button">Iniciar sesión</button>
+          <button class="button">Resgístrame</button>
             <!--
               Remember we can create containers in many ways, but
                 the <div> tag is perfect to define well the elements we need to involved
             -->
           <div class="login__container--remember-me">
+            
             <label>
                 <!--This checkbox is for the remember me-->
-              <input type="checkbox" name="" id="cbox1" value="checkbox">Recuérdame
+              <!--<input type="checkbox" name="" id="cbox1" value="checkbox">Recuérdame-->
             </label>
+            
             <!--This is a clickeable link to go to the forget my password part-->
-            <a href="/">Olvidé mi contraseña</a>
+            
           </div>
         </form>
         <section class="login__container--social-media">
-          <div><img src="https://static.platzi.com/media/tmp/class-files/git/curso-frontend-escuelajs/curso-frontend-escuelajs-maquetacion-login-HTML/maquetacion-login-HTML/assets/google-icon.png" alt="Google">Inicia sesión con Google</div>
+          <!--<div><img src="https://static.platzi.com/media/tmp/class-files/git/curso-frontend-escuelajs/curso-frontend-escuelajs-maquetacion-login-HTML/maquetacion-login-HTML/assets/google-icon.png" alt="Google">Inicia sesión con Google</div>
           <div><img src="https://static.platzi.com/media/tmp/class-files/git/curso-frontend-escuelajs/curso-frontend-escuelajs-maquetacion-login-HTML/maquetacion-login-HTML/assets/twitter-icon.png" alt="Twitter">Inicia sesión con Twitter</div>
+          -->
+          <div>
+            <a href="/">Iniciar Sesión</a>
+          </div>
+
         </section>
-        <p class="login__container--register">No tienes ninguna cuenta, <a href="./Registro.html">Regístrate</a></p>
+        <!--<p class="login__container--register">No tienes ninguna cuenta, <a href="">Regístrate</a></p>-->
       </section>
   </section>
   <footer class="footer">

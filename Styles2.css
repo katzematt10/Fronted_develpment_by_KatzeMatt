@@ -1,4 +1,4 @@
-    body {
+body {
     margin: 0;
     font-family: 'Muli', sans-serif;
     }
@@ -66,13 +66,27 @@
     font-size: 14px;
     text-decoration:underline;
     }
-  .login__container--social-media > div{
+  .login__container--social-media > div {
       display: flex;
       align-items: center;
       font-size: 14px;
       margin-bottom: 10px;
+      margin: 10px 10px;
+      padding-left: 80px;
     }
-
+    .login__container--social-media > div > a {
+        margin: 10px 10px;
+        font-family: 'Muli', sans-serif;
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .login__container--social-media > div > a:hover {
+        text-decoration: underline;
+        
+    }
   .login__container--social-media > div > img{
     /*These arrows ">" show the content i.e., in this case we are including
     alll the images contained into the div included into the element called
