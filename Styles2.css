@@ -1,0 +1,172 @@
+body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    }
+  .header {
+    align-items: center;
+    background-color: #21c08b;
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+  }
+  .header__img {
+    margin-left: 30px;
+    width: 200px;
+  }
+
+  .login {
+      background: linear-gradient(#21C08B, #AB88FF);
+      /*Here, we're start working with one of our previous commands "flex"*/
+      display: flex;
+      align-items: center;          /*Vertical aligment*/
+      justify-content: center;      /*Horizontal aligment*/
+      flex-direction: column ;      /*Locate vertically*/
+      padding: 0px 30px;            /*Margin in the borders*/
+      min-height: calc(100vh - 200px); /*This is kinda complex, because we're
+        putting a minimun height seen by user. Additionally the command "calc"
+        is a calculation where we put the comand "vh" which means view height and
+        it means the percentage seen by the user.*/
+  }
+  /*We have finished the login style, now we're going to go for the login container*/
+  .login__container{
+      background-color: rgba(255,255,255,0.1);
+      border: 2px solid white;
+      border-radius: 40px;
+      color: white; /*Text color*/
+      padding: 60px 68px 40px;
+      min-height: 700px;
+      width: 300px;
+      display: flex;
+      justify-content: space-around; /*To understand this better, check the frog game*/
+      flex-direction: column;
+  }
+  .login__container--form{
+      display: flex;
+      flex-direction: column; /*vertical alignment*/
+  }
+  .login__container--form label{
+    font-size: 14px;
+  }
+  .login__container--remember-me{
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+  }
+  .login__container--remember-me a{
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+  }
+  .login__container--remember-me a:hover{
+    color: white;
+    font-size: 14px;
+    text-decoration:underline;
+    }
+  .login__container--social-media > div {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 10px;
+      margin: 10px 10px;
+      padding-left: 80px;
+    }
+    .login__container--social-media > div > a {
+        margin: 10px 10px;
+        font-family: 'Muli', sans-serif;
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .login__container--social-media > div > a:hover {
+        text-decoration: underline;
+        
+    }
+  .login__container--social-media > div > img{
+    /*These arrows ">" show the content i.e., in this case we are including
+    alll the images contained into the div included into the element called
+    "login__container--social-media"*/
+      width: 30px;
+      margin-right: 10px;
+    }
+  
+  .login__container--register {
+    font-size: 14px;
+  }
+
+  .login__container--register a {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .login__container--register a:hover{
+    color: white;
+    font-size: 16px;
+    text-decoration:underline;
+    }
+
+  /*The next step is to stylize the credential inputs box*/
+  .input {
+    background-color: transparent;
+    border-left: 0px;   /*This is set as zero 'cause we don't need our border in the left*/
+    border-right: 0px;  /*This is set as zero 'cause we don't need our border in the right*/
+    border-top: 0px;    /*This is set as zero 'cause we don't need our border in the top*/
+    border-bottom: 2px solid white; /*This is set as not Zero 'cause this is the onluy border we 
+    need with border*/
+    font-family: 'Muli', sans-serif; /*Assigning the font*/
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px; /*This option is defined to create a space bellow the placeholder*/
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+  /*It's time to stylize our buttons*/
+  .button {
+    background-color: rgba(255,255,255,0.1); /*Make the button white and transparent*/
+    border: none; /*Disappears the outline*/
+    border-radius: 25px; /*This is to make border round, literally*/
+    color: white;
+    font-family: 'Muli', sans-serif; /*Assigning the font*/ 
+    font-size: 16px;
+    cursor: pointer; /*This indicates user, he/she can click on this area*/
+    font-weight: bold;
+    height: 50px;
+    letter-spacing: 1px; /*This is a command to separate letters inside a word, for example 
+    in this case we could have something like this: 
+      i n i c i a r   s e s i o n
+    */ 
+    margin: 0px 10px;
+       
+  }
+
+  /*Finally, it's time to stylize the footer*/
+  .footer {
+    background-color: #AB88FF;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+  }
+  .footer a {
+    color: white;
+    cursor: pointer;
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }

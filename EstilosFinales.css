@@ -1,0 +1,426 @@
+.header{
+    background-color: #AB88FF;
+    /*background-image: linear-gradient(132deg, #AB88FF 0%, #F4D03F 100%);*/
+    width: 100%;
+    height: 80px;
+    /*We saw in the teacher's model we need to 
+    put our photo in the top-right of the window and to do this
+    we need to use the following commands*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body{
+    margin:0;
+    background-color: #AB88FF;
+    /*background-image: linear-gradient(132deg, #AB88FF 0%, #F4D03F 100%);*/
+    width: 100%;
+    height: 80px;
+    /*Font brough from google fonts*/
+    font-family: 'Mulish', sans-serif;
+}
+.header__img{
+    width: 250px;
+    margin-left: 10px;
+    margin-top: 10px;
+    
+}
+/*a{
+    color: white;
+    font-size:medium;
+    margin: 10px 10px 10px;
+}*/
+/*input{
+    margin-top: 80px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}*/
+.header__menu{
+    margin-right: 30px;
+    
+}
+.header__menu li a:hover{
+    text-decoration: underline;
+  
+
+}
+.header__img--profile{
+    width: 100px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 50px;
+    /*display: flex;*/
+    align-items: center;
+}
+.header__menu--profile{
+    margin-right: 8px;
+    display: flex;
+}
+/*This is a way to call an element with no well defined class just
+typing the "route" and then the element, in this case "ul"*/
+.header__menu ul{
+    /*This code is to hide our property in
+    our normal view and forward we're going
+    to make them appear through a hover option.*/
+    display: none;
+    /*by default, we have points in our list but sometimes they are not good to our style so we can 
+    remove it with the following command*/
+    list-style: none;
+    /*Removing the padding*/
+    padding: 0px;
+    /*Adding an absolute position*/
+    position: absolute;
+    width: 100px;
+    /*Aligning the text*/
+    text-align: right;
+    /*We can locate our elements where we want if we
+    know how to play with margins and aligments*/
+    margin: 0px 0px 0px -14px;
+    
+}
+/*Now in our task we need to activate a "hover" and
+this is an action that let us go over an element and
+show hiden elements*/
+.header__menu:hover ul, ul:hover{
+    /*in this case we're going to apply this property to our menu (header__menu)
+    and to our list called "ul"*/
+    display: block;
+}
+/*Now we're going to stylize our list elements*/
+.header__menu li{
+    margin: 5px 10px;
+    /*Normally, we use 4 px elements but 
+    when we use only two, we are assigning the first
+    element to the top and the bottom margin and the second one
+    to the left and right*/
+}
+.header__menu li a{
+    color: white;
+    text-decoration: none;
+}
+.header__menu--profile img{
+    margin-right: 5px;
+    width: 40px;
+    border-radius: 25px;
+}
+.header__menu--profile p{
+    margin: 10px 10px;
+    color: white;
+}
+/********************************************************************************************************/
+/*This will be our section style*/
+.main{
+    height: 300px;
+}
+.main__title{
+    color: white;
+}
+.input{
+    background-color: rgba(255,255,255,0.1);
+    border: 2px solid white;
+    font-size: 25px solid white;
+    /*Make curled borders*/
+    border-radius: 25px;
+    align-items: center;
+    /*Background color*/
+    color: white;
+    /*Font type*/
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    height: 50px;
+    padding: 0px 20px;
+    width: 70%;
+    outline: white;
+    margin: 10px 10px;
+    
+}
+/*Now, to color the text inside the input we can use a pseudo-element starting with "::"*/
+::placeholder{
+    color: white;
+}
+
+
+
+/*-----------------------------------------------*/
+
+body{
+    margin: 0px;
+}
+.carousel{
+    width: 100%;
+    /*We can create a scroll in the screen with the following command*/
+    /*overflow:scroll;*/
+    padding: 30px;
+    position: relative; /*This command can be confusing but it works to make all its "sons" 
+    will be positioned in relation with the "father"*/
+}
+.carousel__container{
+    /*In our elements, we have many options to positionate them. Two good options are, positioning along the
+    website's body or we can put them one below the others and in this case we want the first option
+    and this is made with the following command*/
+    white-space: nowrap;
+    /*
+    In case we need the second option the command would be the following:
+    white-space: normal;
+    */
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    
+}
+.carousel-item{
+    /*To see the initial changes, we're going to add a sample background*/
+    background-color: palevioletred;
+    /*To copy the website image, we can see each image has a width, a heigh and a curved border*/
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    /*
+    The following command is to put an item netx to the other, instead of under it as 
+    we see by defaul. The default value is 
+    display: block
+    */
+    display: inline-block;
+    cursor: pointer; /*This comand is to change the cursor arrow for a hand when we hover over an
+    element*/
+    transition: 450ms all; /*This command is to make our animation more fluid*/
+    transform-origin: center left; /*this command let's us adapt this animation from left to right*/
+    position: relative;
+}
+.carousel-item:hover ~ .carousel-item {
+    /*We used this prooperty previously to modify actions over elements when we go over them*/
+    transform: translate3d(100px, 0, 0);
+    /*In this case, we used a complex command to animate our transitions. */
+}
+.carousel__container:hover  .carousel-item{
+    /*This property is for our elements when we go over them*/
+    opacity: 0.3;
+}
+
+.carousel__container:hover .carousel-item:hover{
+    transform: scale(1.5); /*This element works to increase the element's size when we are over it*/
+    opacity: 1;
+}
+
+.carousel-item__img{
+    
+    /*At first, our images seems a little bit huge so we need to make them fit*/
+    width: 200px;
+    height: 250px;
+    object-fit: cover; /*Sometimes the images will be ruined because we're modifying their size so
+    we can use this command to fit them*/
+    
+}
+.carousel-item__details{
+    
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0));
+           
+    /*Here, were creating our color gradient to create a cool effect, but this command is kinda complex
+    so basic in the way we set it here, we are telling the code the gradient starts in the top (to top)
+    and in the rgba code we're specifying the color black (0,0,0) but with a opacity of 0.9*/
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    
+    width: 100%;
+    height: relative;
+    
+}
+.carousel-item__details:hover{
+    opacity: 1;
+}
+.carousel-item__details img{
+    width: 25px;
+}
+.carousel-item__details p{
+    font-family: 'Mulish', sans-serif;
+    color: white;
+    
+}
+
+
+/*--------------------------------------------------*/
+.Categories__title {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    padding-left: 30px;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Muli', sans-serif;
+    }
+  .header {
+    align-items: center;
+    /*background-color: #21c08b;*/
+    color: white;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    top: 0px;
+    width: 100%;
+  }
+  .header__img {
+    margin-left: 30px;
+    width: 200px;
+  }
+
+  .login {
+      background: linear-gradient(#21C08B, #AB88FF);
+      /*Here, we're start working with one of our previous commands "flex"*/
+      display: flex;
+      align-items: center;          /*Vertical aligment*/
+      justify-content: center;      /*Horizontal aligment*/
+      flex-direction: column ;      /*Locate vertically*/
+      padding: 0px 30px;            /*Margin in the borders*/
+      min-height: calc(100vh - 200px); /*This is kinda complex, because we're
+        putting a minimun height seen by user. Additionally the command "calc"
+        is a calculation where we put the comand "vh" which means view height and
+        it means the percentage seen by the user.*/
+  }
+  /*We have finished the login style, now we're going to go for the login container*/
+  .login__container{
+      background-color: rgba(255,255,255,0.1);
+      border: 2px solid white;
+      border-radius: 40px;
+      color: white; /*Text color*/
+      padding: 60px 68px 40px;
+      min-height: 700px;
+      width: 300px;
+      display: flex;
+      justify-content: space-around; /*To understand this better, check the frog game*/
+      flex-direction: column;
+  }
+  .login__container--form{
+      display: flex;
+      flex-direction: column; /*vertical alignment*/
+  }
+  .login__container--form label{
+    font-size: 14px;
+  }
+  .login__container--remember-me{
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+  }
+  .login__container--remember-me a{
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+  }
+  .login__container--remember-me a:hover{
+    color: white;
+    font-size: 14px;
+    text-decoration:underline;
+    }
+  .login__container--social-media > div{
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+  .login__container--social-media > div > img{
+    /*These arrows ">" show the content i.e., in this case we are including
+    alll the images contained into the div included into the element called
+    "login__container--social-media"*/
+      width: 30px;
+      margin-right: 10px;
+    }
+  
+  .login__container--register {
+    font-size: 14px;
+  }
+
+  .login__container--register a {
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .login__container--register a:hover{
+    color: white;
+    font-size: 16px;
+    text-decoration:underline;
+    }
+
+  /*The next step is to stylize the credential inputs box*/
+  .input {
+    background-color: transparent;
+    border-left: 0px;   /*This is set as zero 'cause we don't need our border in the left*/
+    border-right: 0px;  /*This is set as zero 'cause we don't need our border in the right*/
+    border-top: 0px;    /*This is set as zero 'cause we don't need our border in the top*/
+    border-bottom: 2px solid white; /*This is set as not Zero 'cause this is the onluy border we 
+    need with border*/
+    font-family: 'Muli', sans-serif; /*Assigning the font*/
+    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    outline: none;
+    height: 50px; /*This option is defined to create a space bellow the placeholder*/
+  }
+
+  ::placeholder {
+    color: white;
+  }
+
+  /*It's time to stylize our buttons*/
+  .button {
+    background-color: rgba(255,255,255,0.1); /*Make the button white and transparent*/
+    border: none; /*Disappears the outline*/
+    border-radius: 25px; /*This is to make border round, literally*/
+    color: white;
+    font-family: 'Muli', sans-serif; /*Assigning the font*/ 
+    font-size: 16px;
+    cursor: pointer; /*This indicates user, he/she can click on this area*/
+    font-weight: bold;
+    height: 50px;
+    letter-spacing: 1px; /*This is a command to separate letters inside a word, for example 
+    in this case we could have something like this: 
+      i n i c i a r   s e s i o n
+    */ 
+    margin: 0px 10px;
+       
+  }
+
+  /*Finally, it's time to stylize the footer*/
+  .footer {
+    background-color: #AB88FF;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+  }
+  .footer a {
+    color: white;
+    cursor: pointer;
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  /*Now, we're going to use the Media queries and looks like a little complex but this is the way*/
+  @media only screen and (max-width: 600px) {
+    /*We add the element we'll modify in our resposive*/
+    .login__container {
+      background-color: transparent;
+      border: none;
+      padding: 0px;
+      width: 100%;
+     }
+    .footer {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
