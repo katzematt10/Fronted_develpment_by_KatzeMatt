@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*To use the pseudo, we need to use our selectors and next, we type the selector*/
+        p {
+            color: salmon;
+        }
+        p:hover {
+            color: skyblue;
+            
+        }
+        /*Now we're going to specify a style for the second <p> in our <div>*/
+        div p:nth-child(2) {
+            /*This is called "child" because the <p> is like a son for our <div>*/
+            color: lightseagreen;
+        }
+        /*Now to be specific, we'll change the firt letter's color in each word
+        And to do this, we'll use pseudo-elements*/
+        p::first-letter{
+            color: purple;
+        }
+        /*Now we can put elements before our tags, for example, we'll put emojis before our <p>*/
+        p::before {
+            content: "👻🤪🐸";
+        }
+        /*We'll do the same but putting emojis after our <p>*/
+        p::after {
+            content: "💅💅";
+        }
+        /*We have added an input and a placeholder, so we're provide it with color*/
+        ::placeholder{
+            color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <p>Bonjour!</p>
+    <div>
+        <p>Je suis Mateo</p>
+        <p>Et j'aime programmer</p>
+        <p>dans Platzi 😎</p>
+        <input type="text" placeholder="Je m'appele:">
+    </div>
+</body>
+</html>
