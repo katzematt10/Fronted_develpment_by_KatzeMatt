@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*Here, we'll define the flexbox for our <div> container*/
+        .container {
+            display: flex;
+            background: darkolivegreen;
+            height: 300px;
+            /*Once we have deployed the "display: flex; we can call its properties"*/
+            justify-content: center; /*Horizontal alignment*/
+            flex-direction: column; /*We're changing the vertical orientation*/
+            align-items: center; /*Vertical aligmnet*/
+        }
+        .item {
+            width: 30px;
+            height: 30px;
+            background: darkorange;
+        }
+        
+        .container .item:nth-child(2n+1){
+            /*This looks kinda complex but in this case we're
+            going very deeply to our items, first we go inside the container, and then
+            to the children, but not all of the because of the command nth-child
+            and finally, we defined the following properties and values will be applied to
+            the odd numbers (2n+1)*/
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+    <!--To define a container is good if we specify what will be the container, 
+    in this case is a <div>-->
+    
+    <!--Container <div>-->
+    <div class="container">
+        <!--It's time to define the children-->
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+</body>
+</html>
