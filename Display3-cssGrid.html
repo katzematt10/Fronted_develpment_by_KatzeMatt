@@ -11,8 +11,33 @@
             width: 200px;
             height: 200px;
             background: darkslategray;
-            grid-template-columns: 1fr 2fr 1fr;
-            grid-template-rows: 1fr 2fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        .item {
+            background: blue;
+        }
+        .container .item:nth-child(1) {
+            /*This commands will apply over the first item*/
+            grid-column: 1/2; /*This means the first item will be placed
+            from the line 1 to the line 2*/
+        }
+        .container .item:nth-child(2) {
+            /*This commands will apply over the second item*/
+            grid-column: 2/3; /*This means the first item will be placed
+            from the line 1 to the line 2*/
+            grid-row: 2/3; /*This works like the previous command
+            but with the lines in the rows*/
+        }
+        .container .item:nth-child(3) {
+            /*This commands will apply over the Third item*/
+            grid-column: 3/4;
+            grid-row: 3/4;
+        }
+        .container .item:nth-child(4) {
+            /*This commands will apply over the Fourth item*/
+            grid-column: 4/5;
+            grid-row: 4/5;
         }
     </style>
 </head>
